@@ -68,6 +68,28 @@
         I think this game has good depth and so I'm going to keep working on it.
     </p>
     <hr>
+    <h2>Quick Language Update</h2>
+    <p>
+        Loon now has proper working If statements, their syntax is a bit strange using the { } characters to indicate the statement.
+        Adding this to the LoonVM took a few minutes as the code is the same as the code that jumps over function definitions.
+        Here is some weird code to show this feature:
+    </p>
+    <pre>
+        :add
+            1 + # Add one
+            10 < # Less than 10?
+            { # If statement (branchs if Stack is non-zero)
+                10 + # Add 10
+            }
+        ;
+
+        1 # Push one onto the Stack
+        !add # Jump to the add function
+    </pre>
+    <p>
+        Work continues...
+    </p>
+    <hr>
     <h2>Unfinished Games</h2>
     <p>
         For each project I do, I have maybe a dozen that do not meet a high enough standard to post here.
