@@ -1,1 +1,137 @@
-Hello World
+<html><head>
+    <title>Static Void</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <h1>Static Void</h1>
+    <hr>
+    <a href="https://github.com/Computeiful"><h4>GitHub</h4></a>
+    <hr>
+    <h2>Arrow Game</h2>
+    <p>
+        (Better name pending). The idea for this game came from the somewhat niche Japanese game <a href="https://www.stepmania.com/">StepMania</a>.
+        There is a tiny subset of the StepMania community who use their PC keyboard rather than the intended dancepad.
+        This superior input method means they can achieve faster and more precise moves, pushing them near to the maximum human reaction time.
+        <br><br>
+        I decided to produce a game that is based around the keyboard with more interesting game mechanics.
+        <br><br>
+        Over a few weekends I produced this game:
+    </p>
+    <video loop="" autoplay="" controls="" muted="" width="720">
+        <source src="ArrowGame.webm" type="video/webm">
+        <source src="ArrowGame.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>
+        I kept the hp-bar and the basic scoring system from StepMania but added powerups, such as score-modifiers, time-modifiers and arrows which give negative debuffs.
+        <br><br>
+        This game is very fun and I saw a big improvement in my score after a few hours of time. 
+        I hope to continue working on this game in the future.
+    </p>
+    <hr>
+    <h2>Turfwar</h2>
+    <p>
+        Turfwar is a simple-to-learn, hard-to-master, abstract, turn-based, strategy game I designed and developed. 
+        It takes inspiration from two of the most famous abstract board games, <links><a href="https://en.wikipedia.org/wiki/Blokus">Blockus</a></links> and <links><a href="https://en.wikipedia.org/wiki/Go_(game)">Go</a></links>. 
+        Combining mechanics and concepts from both games creates a new, deep strategy game.
+        <br><br>
+        <img src="TurfwarZoom.png">
+        <br><br>
+        Here is how the game works:
+    </p>
+    <ul>
+        <li>you can put one piece on one map square each turn.</li>
+        <li>a new piece can be placed where there is a piece (of the same colour) in the surrounding eight map squares.</li>
+        <li>new pieces cannot be placed where they form a right angle with surrounding pieces of the same colour.</li>
+        <li>when a piece is surrounded in the four compass directions by an opponent's pieces then it is considered "captured".</li>
+        <li>each piece is worth one point and "captured" pieces are worth two points.</li>
+        <li>the game ends when no-one can make a move.</li>
+    </ul>
+    <p>
+        Each move has both an offensive and defensive aspect to it and a bad move can come back to punish you. 
+        You might think that putting your pieces in a grid formation might be a high scoring method, but remember, such a structure can be taken over by the enemy for a huge increase to their score.
+        <br><br>
+        The game has a tiny average branching factor (around 3 or 4, compared to around 30 in Chess and 250 for Go) meaning that producing a super-smart minimax AI is quite easy (as the AI can have a huge percentage of the Game Search Space in its Search Tree, as opposed to Chess or Go AIs which have a tiny percentage of the Search Space in their Search Trees). 
+        <br><br>
+        This video shows the game in action (made in C with SDL2.0), with two bad bots who both make random moves:
+        <br><br>
+        <video loop="" autoplay="" controls="" muted="" width="720">
+            <source src="Turfwar.webm" type="video/webm">
+            <source src="Turfwar.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            <img src="Turfwar.png">
+        </video>
+        <br><br>
+        The arrow indicates whose turn it is. The teams spend most of their time in a draw as they both do random moves.
+        <br><br>
+        I think this game has good depth and so I'm going to keep working on it.
+    </p>
+    <hr>
+    <h2>Unfinished Games</h2>
+    <p>
+        For each project I do, I have maybe a dozen that do not meet a high enough standard to post here.
+        So, I decided to make this post to show a few of my better, unfinished game projects.
+    </p>
+    <h3>Sokoban</h3>
+    <p>
+        Sokoban is a copy of the Japanese game of the <a href="https://en.wikipedia.org/wiki/Sokoban">same name</a>. 
+        I wanted to incorporate a sort of "AI director" into the game which can produce and test new, random maps in just a few seconds. 
+        The AI measures how hard each map is, based on a number of measures, such as how far the blocks are moved, number of steps to finish, etc.
+        It can then order a hundred-or-so maps of increasing toughness make an adaptive campaign for the user.
+    </p>
+    <video loop="" autoplay="" controls="" muted="" width="720">
+        <source src="Sokoban.webm" type="video/webm">
+        <source src="Sokoban.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>
+        I put this game on the back-burner as I think the main idea behind this game is not yet deep enough to noteworthy or attractive.
+    </p>
+    <h3>Unfinished Sim Game</h3>
+    <p>
+        Think SimCity but on a ruined future Earth.
+        <br><br>
+        In this prototype, the user can just move the camera around and zoom in and out. 
+        There is a tiny minimap showing the user where the camera is which updates if the terrain is changed.
+    </p>
+    <img src="Sim0.png">
+    <br>
+    <img src="Sim1.png">
+    <p>
+        I ended this project as the backstory I wrote for the game became too interesting and in-depth for such a tiny game.
+        I begun reworking this game into an Fallout-inspired isometric RPG, updates to come in a few months or years. 
+    </p>
+    <h3>Card Game</h3>
+    <p>
+        I wanted a CCG with no randomness - randomness is often used as a <i>cheat</i> by game companies to overcome bad game design.
+        The game had a map which has areas you can capture and use.
+    </p>
+    <img src="Card.png">
+    <p>
+        I stopped working on this game as the market for CCGs is oversaturated, though some of it turned into Turfwar.
+    </p>
+    <hr>
+    <h2>JPEG Image Inspection</h2>
+    <p>
+        During some recent AI research, I found that I needed to know by how much the JPEG <i>"Quality"</i> setting effected a compressed image. 
+        So, I ran a quick experiment using an image set of around 1000 unique RGB PNG images which produced this graph: 
+    </p>
+    <img src="JPEGImage.png">
+    <p>
+        The graph shows the mean <a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidean Distance</a> between each image in the image set and its JPEG compressed counterpart. 
+        <br><br>
+        From this graph you can see:
+    </p>
+    <ul>
+        <li>why programs such as Photoshop consider 0.8 and above to be "High Quality".</li>
+        <li>that the image degrades very fast between 0 and about 0.2.</li>
+        <li>at around 0.05 the degradation stops and the image cannot get any more compressed.</li>
+        <li>the image degradation is quite linear, the dashed trend line is logarithmic.</li>
+    </ul>
+    <p>
+        I had hoped that the image degradation would remain linear, though in hindsight, this graph matches what I expected to happen, though I did not expect the strange behaviour seen between 0 and 0.05.
+        <br><br>
+        As a sidenote, finding out how to compress an image with JPEG in memory (rather than using IO, such as saving the image to a disk) was quite hard.
+    </p>
+</body></html>
