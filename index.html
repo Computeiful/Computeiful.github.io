@@ -74,18 +74,17 @@
         Adding this to the LoonVM took a few minutes as the code is the same as the code that jumps over function definitions.
         Here is some weird code to show this feature:
     </p>
-    <pre>
-        :add
-            1 + # Add one
-            10 < # Less than 10?
-            { # If statement (branchs if Stack is non-zero)
-                10 + # Add 10
-            }
-        ;
+<pre>
+:add
+    1 + # Add one
+    10 < # Less than 10?
+    { # If statement (branchs if Stack is non-zero)
+        10 + # Add 10
+    }
+;
 
-        1 # Push one onto the Stack
-        !add # Jump to the add function
-    </pre>
+1 # Push one onto the Stack
+!add # Jump to the add function</pre>
     <p>
         Work continues...
     </p>
